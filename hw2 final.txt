@@ -1,0 +1,103 @@
+> #Ndeye Khadidiatou Mbodj
+> 
+> #1
+> #(i) Generate a random 0/1 variable which is equal to 1 with probability 10−4. (Hint: There are many ways to do this, e.g. using rbinom with size 1, using runif and if ... else, or you may even use sample and set the parameter prob.)
+> rbinom(n=1,size=1,prob=0.0001)
+[1] 0
+> 
+> #2
+> #Generate 1, 000 random 0/1 variables that model mutations occuring along a 1, 000 long gene sequence (use 1 to represent the mutation). Assume these mutations occur independently at a rate of 10−4 each; that is, each variable is equal to 1 with probability 10−4. Then sum the 1, 000 positions to count the total number of mutations.
+> rbinom(n=1000,size=1000,prob=0.0001)
+   [1] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+  [52] 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0
+ [103] 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 1 0 0 0 0 0 0
+ [154] 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ [205] 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 2
+ [256] 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1
+ [307] 0 1 0 0 0 0 0 0 1 0 1 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 1 1 0
+ [358] 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0
+ [409] 1 0 0 0 0 0 0 0 0 0 0 1 0 0 2 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 0 0 0
+ [460] 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ [511] 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0
+ [562] 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0
+ [613] 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+ [664] 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ [715] 0 0 0 1 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1
+ [766] 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 1 1 0 0 0 0 0 1 0 0 0 0 1 1 0 0 0 0 1
+ [817] 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [868] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0
+ [919] 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [970] 0 0 0 0 1 0 0 0 0 0 1 0 0 1 0 1 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0
+> sum(rbinom(1000,1000,0.0001))
+[1] 103
+> 
+> #3
+> #(iii) Let X denote the total number of mutations in the previous question. X actually follows a binomial distribution. What are the values of the parameters for this binomial?
+> #its parameters are n=1000, prob=0.0001
+> 
+> #4
+> #According to your answer to the previous question, use rbinom to sample the value of X 1, 000 times, i.e. generate 1, 000 numbers from that binomial distribution in part (iii). Save these numbers to a vector named n.mutations. Make a rootogram using the code below. (Hint: You need to first install the library vcd and load it.)
+> 
+> X<-103
+> rbinom(1000,1000,0.0001)
+   [1] 0 0 1 0 0 0 0 0 2 0 0 0 0 0 1 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+  [61] 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0
+ [121] 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [181] 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [241] 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 0 1 0 0 0 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [301] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [361] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 2 0 0 0 0 0 1 0 0 0 0 0 0 1 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0
+ [421] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ [481] 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0
+ [541] 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 0 1 0 0 0 0 1 0 0 0 0 1
+ [601] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 1 0 1 1 1 0 0 1 1 0 1 0 1 0 0 0 0 0 0 0 0 0
+ [661] 0 0 0 0 0 0 0 1 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 1 0 1 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0
+ [721] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 3 0 0 0 0 0 0 0 0 0
+ [781] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 2 1 0 0 0 0 0 0 0 0 0
+ [841] 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 2 0 0 1 0 1 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0
+ [901] 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 1 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 1 0 0 0 0 0 0 0 0 0 0 1 0 0 1 1 0
+ [961] 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+> 
+> #5
+> #According to your answer to the previous question, use rbinom to sample the value of X 1, 000 times, i.e. generate 1, 000 numbers from that binomial distribution in part (iii). Save these numbers to a vector named n.mutations. Make a rootogram using the code below. (Hint: You need to first install the library vcd and load it.)
+> n.mutations<-rbinom(1000,1000,0.0001)
+> library(vcd)
+Loading required package: grid
+> rootogram(goodfit(n.mutations, "poisson"))
+> 
+> 
+> #6From 1965 to 1974, in U.S. there were M = 17, 857, 857 male livebirths and F = 16, 974, 194 female livebirths. We model the number of male livebirth as a binomial distribution with arameters size = M+F and prob = p. The following code computes the maximum likelihood estimator for p.
+> M <- 17857857 
+> F <- 16974194
+> ll <- function(p){ dbinom(M, size=M+F, prob=p, log=TRUE) }
+> ps <- seq(0.01, 0.99, by = 0.001)
+> ll.ps <- ll(ps)
+> plot(ps, ll.ps, type='l')
+> phat <- ps[which.max(ll.ps)]
+> abline(v = phat, col='blue')
+> 
+> #(i) What is the use of the parameter log=TRUE in the definition of function ll? (Hint: Use the R help document.)
+> #logical; if TRUE, probabilities p are given as log(p).
+> 
+> #(ii) Is ll the likelihood function or the log-likelihood function? 
+> #it's the log likelihood function
+> 
+> #(iii) An estimator for p, denoted by pˆ, is obtained by ps[which.max(ll.ps)]. Is this the maximum likelihood estimator? Why (explain the code)?
+> ps[which.max(ll.ps)]
+[1] 0.513
+> #it gives us the maximum likelihood. which. is a function that Determines the location, i.e., index of the (first) minimum or maximum of a numeric (or logical) vector.
+> 
+> #(iv) What can we learn from the plot?
+> #the plot gives us the probability of having the maximum amount of malebirths.
+> 
+> #(v) For this problem, can you give a theoretical formula for the maximum likelihood estimator, pˆ, using M and F? (No need to compute the numerical value.)
+> # M/M+F
+> 
+> 
+> #7
+> #(i) What is the likelihood of N = 2, i.e. the probability of observing 2 1 3 1 if N = 2?
+> #the likelihood is 0 since 3 is not between 0:2
+> #(i) What is the likelihood of N = 2, i.e. the probability of observing 2 1 3 1 if N = 2?
+> #the likelihood of drawing 2131 is 1/12. since there are 12 possible combinations with 3 numbers.
+> #thelikelihood of N=4 is 1/16, since there are 16 possible combinations with 4 numbers.
+> # the maximum likelihood is N=3 since there are less possible combinations.
